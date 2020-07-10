@@ -1,0 +1,39 @@
+<h3>Add New League </h3>
+
+
+ <form (ngSubmit) = "onSubmit()">
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" >League Name :</label>
+        <div class="col-sm-8">
+        <input type ="text" class="form-control" 
+        placeholder="name" [(ngModel)] = "league.league_name" name= "league_name"/>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" >Latitude:</label>
+        <div class="col-sm-3">
+        <input  class="form-control" placeholder="latitude"/>
+        </div>
+        <label class="col-sm-2 col-form-label" >Longitude:</label>
+        <div class="col-sm-3">
+        <input  class="form-control" placeholder="longitude"/>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label class="col-sm-2 col-form-label" >Sponsonship Price: </label>
+        <div class="col-sm-8">
+        <input type = "number"  class="form-control" placeholder="0" [(ngModel)] = "league.Price" name= "price"/>
+        </div>
+    </div>
+    <div class = "button-option">
+    <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
+    </div>
+</form> 
+
+
+
+
+
+

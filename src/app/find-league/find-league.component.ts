@@ -1,0 +1,26 @@
+import { League } from './../models/league';
+import { LeaguesService } from './../services/leagues.service';
+import { Component, OnInit } from '@angular/core';
+
+
+
+@Component({
+  selector: 'app-find-league',
+  templateUrl: './find-league.component.html',
+  styleUrls: ['./find-league.component.css']
+})
+export class FindLeagueComponent implements OnInit {
+
+  league :League[];
+
+  constructor(private leaguesService:LeaguesService) { }
+
+  ngOnInit(): void {
+    this.leaguesService.getLeague().subscribe(leagues => {
+     // console.log(leagues);
+      this.league = leagues;
+
+    } );
+  }
+
+}
