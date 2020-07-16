@@ -1,6 +1,10 @@
-# Project1
+# Demo 
+https://cstechie.me/app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+
+# Sport League
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1 and FireBase 
 
 ## Development server
 
