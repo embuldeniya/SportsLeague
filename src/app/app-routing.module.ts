@@ -1,3 +1,4 @@
+import { FirestoreQueryComponent } from './firestore-query/firestore-query.component';
 import { FindLeagueComponent } from './find-league/find-league.component';
 import { AddLeagueComponent } from './add-league/add-league.component';
 import { NgModule } from '@angular/core';
@@ -5,7 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-    {path: '', redirectTo: '/', pathMatch: 'full'},
+   // {path: '', redirectTo: '/', pathMatch: 'full'},
+    {path: '', component: FirestoreQueryComponent},
   {path: 'add', component: AddLeagueComponent},
   {path: 'find', component: FindLeagueComponent},
 

@@ -1,0 +1,29 @@
+
+<div class = "result">
+
+   <strong> All the Results from FireBase </strong>
+</div>
+
+
+  <table style="width:100%"  >
+    <tr > 
+      <th>Name of the Sports League</th>
+      <th>Sponsorship Price</th> 
+      <th>Latitude</th>
+      <th>Longitude</th>
+     </tr>
+    <tr (dblclick) = "deleteLeague($event, league)"*ngFor= "let league of league" >
+       
+      <td>{{league.league_name}}</td>
+      <td>{{league.Price}}</td>
+      <td>{{league.Latitude}}</td>
+      <td>{{league.Longitude}}</td>
+ 
+    
+  </table>
+
+  <div class = "result">
+    Click on any row to delete the data !!
+  </div>
+
+

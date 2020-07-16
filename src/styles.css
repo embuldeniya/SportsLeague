@@ -4,7 +4,27 @@ h2 {
     margin-top: 0;
     padding-top: 0;
   }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  th {
+    background-color:#10cde6;
+    color: white;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  tr:nth-child(even) {background-color: #f2f2f2;}
 
+  .result{
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
  
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

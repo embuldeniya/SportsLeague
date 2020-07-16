@@ -1,3 +1,5 @@
+
+
 <h3>Add New League </h3>
 
 
@@ -13,11 +15,11 @@
     <div class="form-group row">
         <label class="col-sm-2 col-form-label" >Latitude:</label>
         <div class="col-sm-3">
-        <input  class="form-control" placeholder="latitude"/>
+        <input  class="form-control" placeholder="latitude" [(ngModel)] = "league.Latitude" name= "Latitude"/>
         </div>
         <label class="col-sm-2 col-form-label" >Longitude:</label>
         <div class="col-sm-3">
-        <input  class="form-control" placeholder="longitude"/>
+        <input  class="form-control" placeholder="longitude" [(ngModel)] = "league.Longitude" name= "Longitude"/>
         </div>
     </div>
 
@@ -31,6 +33,11 @@
     <button class="btn btn-primary" type="submit" value="Submit">Submit</button>
     </div>
 </form> 
+<br>
+<div class = "result">
+
+    {{result}}
+</div>
 
 
 

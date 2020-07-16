@@ -10,13 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddLeagueComponent implements OnInit {
 
+  
   league: League = {
     league_name: "",
-    Price : 0
-
-
+    Price : 0,
+    Latitude:0,
+    Longitude:0.
+   
   }
-
+    result = " ";
   constructor(private leagueService: LeaguesService) { }
 
   ngOnInit(): void {
@@ -25,9 +27,16 @@ export class AddLeagueComponent implements OnInit {
   onSubmit(){
     if (this.league.league_name != '' && this.league.Price != 0){
       this.leagueService.addLeague(this.league);
+      this.result = "Successfully Added: " + this.league.league_name + " for " + this.league.Price
       this.league.league_name ='';
-      this.league.Price
+      this.league.Price = 0;
+      this.league.Latitude= 0;
+      this.league.Longitude=0;
+     
 
+    }
+    else{
+      this.result = "Enter more details"
 
     }
 
