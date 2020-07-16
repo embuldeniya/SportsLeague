@@ -1,3 +1,4 @@
+//Tharinda Embuldeniya 
 import { League } from './../models/league';
 import { LeaguesService } from './../services/leagues.service';
 import { Component} from '@angular/core';
@@ -21,7 +22,7 @@ export class FindLeagueComponent  {
 
   constructor(private leaguesService:LeaguesService ) { }
 
-
+  // Search criteria based on user input
   onSearch(latitude: string , longitude:string, radius:string, budget: string ){
   if (  latitude ===""  && longitude  ==="" && radius ==="" && budget ===""){
    
@@ -52,9 +53,10 @@ export class FindLeagueComponent  {
     const maxlong = long + this.radian_to_degrees(miles / rad / (Math.cos(this.degress_to_radian(lat))));
     const minlong = long - this.radian_to_degrees(miles / rad / (Math.cos(this.degress_to_radian(lat))));
 
+    // pass data to league service
     this.leaguesService.getBudget(this.budget).subscribe(leagues => {
      
-     
+     // filter out required geo points
     this.league = leagues.filter(item =>
     
       
@@ -77,7 +79,7 @@ export class FindLeagueComponent  {
 
 
   
-    //trt to limit the budget --- seems to stuck with limiting the Firestore query 
+    //try to limit query based on user budget  --- seems to stuck with limiting the Firestore query 
     check(nu1 : number){
 
       this.counter += nu1; 

@@ -1,3 +1,4 @@
+//Tharinda Embuldeniya 
 import { League } from './../models/league';
 import { LeaguesService } from './../services/leagues.service';
 import { Component, OnInit } from '@angular/core';
@@ -24,6 +25,7 @@ export class AddLeagueComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // adding form data by onClick - submit
   onSubmit(){
     if (this.league.league_name != '' && this.league.Price != 0){
       this.leagueService.addLeague(this.league);

@@ -18,6 +18,8 @@ export class FirestoreQueryComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    //display all documents from firestore collection
     this.leaguesService.getLeagues().subscribe(leag =>{
 
       this.league = leag;
@@ -25,9 +27,11 @@ export class FirestoreQueryComponent implements OnInit {
     } );
 
   }
+  //delete function based on row click 
   deleteLeague(event,league ){
     this.leaguesService.deleteLeague(league);
 
   }
 
 }
+//Tharinda Embuldeniya 

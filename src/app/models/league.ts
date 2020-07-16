@@ -1,3 +1,4 @@
+//firestore json structure
 export interface League{
     id?:string;
     league_name?:string;

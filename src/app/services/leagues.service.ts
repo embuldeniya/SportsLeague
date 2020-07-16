@@ -1,3 +1,5 @@
+//Tharinda Embuldeniya 
+
 import { map } from 'rxjs/operators';
 import { League } from './../models/league';
 import { Injectable} from '@angular/core';
@@ -11,6 +13,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class LeaguesService {
+  
+  //method for query on the required budget
   getBudget(price: number) {
 
     this.leagueCollection = this.afs.collection<League>('league', ref=>{
@@ -45,7 +49,7 @@ export class LeaguesService {
   leagueDoc: AngularFirestoreDocument<League>;
   
 
-
+// feed stream of data from firestore as observable
   constructor(private afs:AngularFirestore ) { 
     this.leagueCollection = this.afs.collection('league');
     this.league =  this.leagueCollection
@@ -67,16 +71,18 @@ export class LeaguesService {
 
  
 
-  
+  // adding data to firestore
   addLeague(league: League){
     this.leagueCollection.add(league)
 
   }
-
+  // requesting all data from firestore collection
   getLeagues(){
 
     return this.league;
   }
+
+  //deleting a particular doc from firestore 
   deleteLeague(league: League){
     this.leagueDoc = this.afs.doc(`league/${league.id}`);
     this.leagueDoc.delete();

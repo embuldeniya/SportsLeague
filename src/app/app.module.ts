@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.prod';
 import {FormsModule} from '@angular/forms';
 import { FirestoreQueryComponent } from './firestore-query/firestore-query.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -25,6 +26,7 @@ import { FirestoreQueryComponent } from './firestore-query/firestore-query.compo
     AddLeagueComponent,
     FindLeagueComponent,
     FirestoreQueryComponent,
+    FooterComponent,
     
   ],
   imports: [
