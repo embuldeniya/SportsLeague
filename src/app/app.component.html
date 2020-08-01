@@ -1,10 +1,26 @@
 
 
 <a routerLink="/"><h1> {{title}}</h1></a>
+<br>
+<br>
+<div class = "userName" *ngIf="user; else loginBlock"> <strong >Welcome </strong>{{ user.displayName }}
+  <button class="btn btn-danger btn-sm" *ngIf="user" (click)="logout()">Logout</button>
+</div>
+
+<ng-template #loginBlock >
+  <div class = "userName"> 
+  <button class="btn btn-info mr-2 btn-sm" *ngIf="!user" (click)="register()">Register</button>
+  <button class="btn btn-primary btn-sm" *ngIf="!user" (click)="login()">Login</button>
+</div>
+</ng-template>
+
 
 <nav>
+    <a routerLink="/query">View All League </a>
     <a routerLink="/add">Add A League </a>
     <a routerLink="/find">Find League  </a>
+   
+    
   </nav>
   <br> 
  <router-outlet> </router-outlet>
