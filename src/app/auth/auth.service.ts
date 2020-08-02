@@ -60,7 +60,7 @@ export class AuthService {
       email: this.newUser.email,
       firstname: this.newUser.firstName,
       lastname: this.newUser.lastName,
-      role: 'online user'
+      role: 'online'
     })
   }
 
