@@ -1,7 +1,7 @@
 export const environment = {
   production: true, 
   firebase: {
-    apiKey: ,
+    apiKey:"AIzaSyDAX81FE7RzKAAAEkjSRso6tHqfIba7SM4",
     authDomain: "sports-league-us.firebaseapp.com",
     databaseURL: "https://sports-league-us.firebaseio.com",
     projectId: "sports-league-us",

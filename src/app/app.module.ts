@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-import { environment } from '../environments/environment';
+import { environment } from '../environments/environment.prod';
 import {FormsModule} from '@angular/forms';
 import { FirestoreQueryComponent } from './firestore-query/firestore-query.component';
 import { FooterComponent } from './footer/footer.component';

@@ -31,4 +31,9 @@ export class LoginComponent implements OnInit {
     this.auth.login(frm.value.email, frm.value.password);
   }
 
+  navForget(){
+    this.router.navigate(['/forget']);
+
+  }
+
 }
